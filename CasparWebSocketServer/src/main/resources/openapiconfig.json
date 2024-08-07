@@ -1,0 +1,5 @@
+{
+  "interfaceOnly": true,
+  "apiPackage" : "com.bodrul2112.casparwebsocketserver.generated.apis",
+  "modelPackage" : "com.bodrul2112.casparwebsocketserver.generated.models"
+}

@@ -1,0 +1,39 @@
+openapi: 3.0.0
+info:
+  title: User API
+  version: 1.0.0
+paths:
+  /username:
+    get:
+      summary: Get username data
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  name:
+                    type: string
+                    example: "John Doe"
+                  rank:
+                    type: integer
+                    example: 1
+  /other:
+    get:
+      summary: Get username data
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  nickname:
+                    type: string
+                    example: "Johnny"
+                  credits:
+                    type: integer
+                    example: 1
