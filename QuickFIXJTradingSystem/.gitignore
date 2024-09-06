@@ -43,3 +43,4 @@ bin/
 
 ### QuickFix ###
 log/*
+store/*
