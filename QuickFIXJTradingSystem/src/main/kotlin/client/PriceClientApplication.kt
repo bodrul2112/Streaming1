@@ -1,5 +1,7 @@
 package client
 
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.runBlocking
 import quickfix.*
 import quickfix.Message
 import quickfix.fix44.*
@@ -32,7 +34,7 @@ class PriceClientApplication : Application {
     }
 }
 
-fun main() {
+fun main() = runBlocking {
     val settings = SessionSettings("client.cfg")
     val application = PriceClientApplication()
     val storeFactory = FileStoreFactory(settings)
@@ -42,6 +44,5 @@ fun main() {
     val initiator = SocketInitiator(application, storeFactory, settings, logFactory, messageFactory)
     initiator.start()
 
-
-    Thread.sleep(Long.MAX_VALUE)
+    delay(Long.MAX_VALUE)
 }
